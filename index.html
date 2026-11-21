@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cameron Yarnall</title>
+  <meta name="description" content="Cameron Yarnall, Cybersecurity student at Northeastern University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="avatar"><img src="images/profile.png" alt="Photo of Cameron Yarnall" width="112" height="112"></div>
+      <div class="who">
+        <h1>Cameron Yarnall</h1>
+        <p class="role">Cybersecurity student at Northeastern University</p>
+      </div>
+      <button class="theme" type="button" aria-label="Toggle dark mode">dark</button>
+    </header>
+
+    <p class="links">
+      <a href="https://www.linkedin.com/in/cameron-yarnall/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Cameron1386" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+    </nav>
+
+    <!-- ABOUT -->
+    <div class="panel" id="about">
+      <section>
+        <p>I'm a first-year Cybersecurity student at Northeastern, originally from New Jersey. I've been
+          into security since high school, when I interned at the NJCCIC. I like building things people
+          can actually use, from cybersecurity games for kids to hardware at hackathons.</p>
+      </section>
+
+      <section id="activity" hidden>
+        <h2>GitHub activity</h2>
+        <div class="heat-wrap"><div class="heat" id="heat"></div></div>
+        <p class="heat-meta"><span id="heat-total"></span> in the last year ·
+          <a href="https://github.com/Cameron1386" target="_blank" rel="noopener noreferrer">@Cameron1386</a></p>
+      </section>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="panel" id="projects">
+      <section>
+        <dl>
+          <dt>Nov 2026</dt>
+          <dd>
+            <strong><a href="https://github.com/jaken31/effente" target="_blank" rel="noopener noreferrer">effente</a></strong>
+            <p>Handheld sensor that spots early signs of machine failure. Won 3rd place and $1,000 at the <a href="https://scion.events/300-hackathon" target="_blank" rel="noopener noreferrer">300 AI Hackathon</a>.</p>
+            <figure class="shot">
+              <img src="images/effente_team-web.jpg" alt="The effente team holding the handheld sensor prototype" width="1600" height="1067" loading="lazy">
+              <figcaption>The team with the effente prototype.</figcaption>
+            </figure>
+          </dd>
+
+          <dt>2025 – 2026</dt>
+          <dd>
+            <strong><a href="https://ctf-challenge-nine.vercel.app" target="_blank" rel="noopener noreferrer">Pandemonium</a></strong>
+            <span class="src"><a href="https://github.com/Cameron1386/CTF-Challenge" target="_blank" rel="noopener noreferrer">source</a></span>
+            <p>A story-driven cybersecurity game for younger students. Players are interns at the Panda Proxy
+              Agency who solve mysteries by finding hidden messages, cracking ciphers and writing simple code.
+              Built with Sebastian Mercado and Ramakrishnan Panchacharam.</p>
+          </dd>
+        </dl>
+      </section>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="panel" id="experience">
+      <section>
+        <h2>Work</h2>
+        <dl>
+          <dt>Summer 2024</dt>
+          <dd>
+            <strong>Summer Intern</strong>, NJCCIC
+            <p>New Jersey Cybersecurity &amp; Communications Integration Cell, the state's cybersecurity agency.</p>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Awards</h2>
+        <dl>
+          <dt>2026</dt>
+          <dd>
+            <strong>3rd place, Webmaster</strong>, NJ TSA State Conference
+            <span class="src"><a href="https://resources.finalsite.net/images/v1778169317/npsdk12njus/w3xihxjpdmu3bybgru1w/2026NJTSAPressRelease.pdf" target="_blank" rel="noopener noreferrer">press release</a></span>
+            <p><a href="https://union-county-community-hub.vercel.app/" target="_blank" rel="noopener noreferrer">Union County Community Resource Hub</a>, a
+              website that helps residents find local events and activities. Built with a team of five.</p>
+          </dd>
+
+          <dt>2024</dt>
+          <dd>
+            <strong>1st place in New Jersey</strong>, CyberStart America
+            <span class="src"><a href="https://www.cyber.nj.gov/connect/events/cyberstart-america-csa" target="_blank" rel="noopener noreferrer">NJCCIC</a></span>
+            <p>One of four students statewide to earn the maximum possible score, recognized by the NJCCIC at the
+              2023/2024 CyberStart Achievement Awards. Also named Rookie of the Year.</p>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <dl>
+          <dt>2026 – 2030</dt>
+          <dd>
+            <strong>Northeastern University</strong>
+            <p>B.S. Cybersecurity</p>
+          </dd>
+          <dt>2022 – 2026</dt>
+          <dd>
+            <strong>New Providence High School</strong>
+          </dd>
+        </dl>
+      </section>
+    </div>
+
+    <footer>© 2026 Cameron Yarnall</footer>
+  </main>
+
+  <script>
+    // theme toggle
+    var btn = document.querySelector('.theme'), root = document.documentElement;
+    function isDark() {
+      return root.dataset.theme ? root.dataset.theme === 'dark'
+        : matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function label() { btn.textContent = isDark() ? 'light' : 'dark'; }
+    label();
+    btn.addEventListener('click', function () {
+      root.dataset.theme = isDark() ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      label();
+    });
+
+    // tabs: show one panel at a time, driven by the URL hash
+    var panels = document.querySelectorAll('.panel'), tabs = document.querySelectorAll('.tabs a');
+    function show() {
+      var id = (location.hash || '#about').slice(1);
+      if (!document.getElementById(id) || !document.getElementById(id).classList.contains('panel')) id = 'about';
+      panels.forEach(function (p) { p.hidden = p.id !== id; });
+      tabs.forEach(function (t) {
+        var on = t.getAttribute('href') === '#' + id;
+        t.classList.toggle('active', on);
+        if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('hashchange', function () { show(); window.scrollTo(0, 0); });
+    show();
+
+    // GitHub contribution heatmap (live, last 12 months)
+    fetch('https://github-contributions-api.jogruber.de/v4/Cameron1386?y=last')
+      .then(function (r) { if (!r.ok) throw r; return r.json(); })
+      .then(function (data) {
+        var days = data.contributions, heat = document.getElementById('heat');
+        // pad the first column so weeks start on Sunday
+        var pad = new Date(days[0].date + 'T00:00:00').getDay();
+        for (var i = 0; i < pad; i++) heat.appendChild(document.createElement('i'));
+        days.forEach(function (d) {
+          var c = document.createElement('i');
+          c.className = 'l' + d.level;
+          c.title = d.count + ' contribution' + (d.count === 1 ? '' : 's') + ' on ' + d.date;
+          heat.appendChild(c);
+        });
+        var total = data.total.lastYear;
+        document.getElementById('heat-total').textContent =
+          total + ' contribution' + (total === 1 ? '' : 's');
+        document.getElementById('activity').hidden = false;
+        var wrap = heat.parentNode; wrap.scrollLeft = wrap.scrollWidth; // show most recent on small screens
+      })
+      .catch(function () { /* leave the section hidden if the API is unreachable */ });
+  </script>
+</body>
+</html>
